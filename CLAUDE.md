@@ -1,10 +1,21 @@
 # **Project: AI SEO Agent Landing Page**
 
-This document serves as the primary specification file (claude.md) for the development of a high-performance landing page for an AI-powered SEO Agent. This document follows "Spec-Driven Development" principles to ensure a disciplined workflow for coding agents.
-
 # **Project Overview**
 
 The objective is to build a modern, high-conversion landing page for an AI SEO Agent that automates keyword research, content optimization, and technical audits. Leveraging the existing modular architecture from previous projects, the backend will prioritize session persistence and context-aware interactions.
+
+## Context
+
+- **Product:** AI-powered SEO Agent.
+- **Role:** Autonomous SEO optimization, SERP tracking, and deployment.
+- **Target Audience:** Developers and Technical SEO Managers.
+
+## Tech Stack & Architecture
+
+- **Framework:** React + TypeScript.
+- **Styling:** Tailwind CSS (utility-first).
+- **Structure:** Modular component-based architecture.
+- **Data Handling:** Content-first approach. All content, pricing, and features must be defined as data objects (in `data.ts`) rather than hardcoded in the UI.
 
 ## Commands
 
@@ -14,6 +25,16 @@ npm run build     # Type-check (tsc -b) then bundle for production
 npm run lint      # Run ESLint
 npm run preview   # Preview production build locally
 ```
+
+## Design Pattern: "Product-in-Action" (Dashboard-First)
+
+- **Philosophy:** No stock photos. Every section must visually simulate the product interface.
+- **The Three-Act Module:** Every feature section must follow this specific flow:
+  1. **Pain:** UI Component showing the issue (e.g., Red status, low rank).
+  2. **Action:** `AgentThoughtBubble` component showing the AI processing the fix.
+  3. **Result:** Metric widget showing the success state (e.g., Green status, improved rank).
+- **Interactive Mockups:** Hero sections should use a "Mock Console" component. Simulate live output (logs/audit findings) rather than static images.
+- **Typography:** Use `font-mono` for console logs, audit outputs, and code snippets. Use `font-sans` for standard marketing copy.
 
 ## Design System & Styling
 
