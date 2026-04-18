@@ -15,13 +15,16 @@ npm run lint      # Run ESLint
 npm run preview   # Preview production build locally
 ```
 
-# **Design & Style Guidelines**
+## Design System & Styling
 
-The aesthetic should be "Bento-grid" inspired, clean, and developer-centric, avoiding bright saturated colors and adhering to a professional palette.
-
-- **Color Palette:** Deep Slate (#1A202C), Subtle Navy (#2D3748), and soft Indigo accents (#667EEA).
-- **Typography:** Use a Minor Second type scale for high-quality information density.
-- **Visual Elements:** Subtle borders (1px solid #E2E8F0), glassmorphism effects for the chat widget, and smooth auto-scrolling transitions.
+- **Palette:** Use the "Engine Room" palette for all components.
+- **Design Tokens:**
+  - Background: `bg-agent-bg` (zinc-950)
+  - Text: `text-agent-text` (zinc-100)
+  - Accent/CTA: `text-agent-accent` (emerald-400)
+  - Borders: `border-zinc-800`
+- **Rule:** Never hardcode hex values. Always reference the `tailwind.config.js` `agent` theme object.
+- **Accessibility:** Ensure a minimum contrast ratio of 4.5:1 for all text.
 
 |   Section    |  Component Name  |   Purpose   |                                        Key Elements                                        |
 | :----------: | :--------------: | :---------: | :----------------------------------------------------------------------------------------: |
@@ -73,5 +76,3 @@ Since you are comfortable with the MERN stack and TypeScript, you can map these 
 1.  **Modularize:** Create a directory `/components/landing` to hold these individual files.
 2.  **State Management:** For the Hero CTA or Pricing toggles, use minimal state.
 3.  **Type Safety:** Define your interfaces for components (e.g., `interface PricingCardProps`) early to ensure consistency.
-
-

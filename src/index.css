@@ -12,15 +12,20 @@
   font-style: normal;
 }
 
+/* Engine Room palette — zinc-950 / emerald-400 */
 :root {
-  --bg-primary: #0a0a0f;
-  --bg-secondary: #12121a;
-  --text-primary: #f8f9fa;
-  --text-secondary: #a0a0ab;
-  --accent-primary: #6366f1;
-  --accent-secondary: #ec4899;
-  --accent-tertiary: #8b5cf6;
-  --gradient-text: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
+  --agent-bg:        #09090b; /* zinc-950 */
+  --agent-bg-card:   #18181b; /* zinc-900 */
+  --agent-bg-raised: #27272a; /* zinc-800 */
+  --agent-border:    #27272a; /* zinc-800 */
+  --agent-border-mid:#3f3f46; /* zinc-700 */
+  --agent-text:      #f4f4f5; /* zinc-100 */
+  --agent-text-muted:#a1a1aa; /* zinc-400 */
+  --agent-text-faint:#71717a; /* zinc-500 */
+  --agent-accent:    #34d399; /* emerald-400 */
+  --agent-accent-dk: #10b981; /* emerald-500 */
+  --agent-accent-lt: #6ee7b7; /* emerald-300 */
+  --agent-glow:      rgba(52, 211, 153, 0.15);
 }
 
 * {
@@ -31,8 +36,8 @@
 
 body {
   font-family: 'PPMondwest', sans-serif;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: var(--agent-bg);
+  color: var(--agent-text);
   min-height: 100vh;
   overflow-x: hidden;
 }
