@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'PPMondwest';
+  src: url('./assets/ppmodwestFOnt/ppmondwest-regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PPNeueBit';
+  src: url('./assets/ppmodwestFOnt/ppneuebit-bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --text-primary: #f8f9fa;
+  --text-secondary: #a0a0ab;
+  --accent-primary: #6366f1;
+  --accent-secondary: #ec4899;
+  --accent-tertiary: #8b5cf6;
+  --gradient-text: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'PPMondwest', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--accent-primary);
+  color: white;
+}
