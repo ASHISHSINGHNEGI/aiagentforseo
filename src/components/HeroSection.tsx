@@ -6,21 +6,7 @@ export function HeroSection() {
     <div className="hero-outer" id="hero">
       <section className="hero">
         <div className="hero-content">
-          <div className="hero-badge">
-            <span className="badge-dot" />
-            Agent v2.0 — Real-time SERP tracking is live
-          </div>
-          <h1 className="hero-title">
-            Stop chasing
-            <br />
-            algorithms.{" "}
-            <span className="text-gradient">
-              Start
-              <br />
-              scaling
-            </span>{" "}
-            organic growth.
-          </h1>
+          <h1 className="hero-title">AI for SEO</h1>
           <p className="hero-description">
             Meet the first autonomous AI agent that audits, optimizes, and
             deploys SEO changes directly to your stack — without lifting a

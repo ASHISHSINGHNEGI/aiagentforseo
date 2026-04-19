@@ -17,13 +17,13 @@ function App() {
       <SiteHeader />
       <main>
         <HeroSection />
-        <SocialProofBar />
+        {/* <SocialProofBar />
         <PainPointSection />
         <AgentWorkflow />
         <FeatureGrid />
-        <PricingTable />
+        <PricingTable /> */}
       </main>
-      <SiteFooter />
+      {/* <SiteFooter /> */}
     </div>
   );
 }

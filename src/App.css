@@ -8,7 +8,7 @@
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
-  background: var(--agent-bg);
+  /* background: var(--agent-bg); */
 }
 
 .bg-glow-1,
@@ -244,7 +244,7 @@ main {
   padding: 1rem 5%;
   /* background: rgba(9, 9, 11, 0.82); */
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--agent-border);
+  /* border-bottom: 1px solid var(--agent-border); */
   box-sizing: border-box;
 }
 
@@ -268,14 +268,14 @@ main {
   gap: 2rem;
 }
 .nav-links a {
-  color: var(--agent-text-muted);
+  color: var(--agent-text);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
   transition: color 0.2s;
 }
 .nav-links a:hover {
-  color: var(--agent-text);
+  color: var(--agent-text-muted);
 }
 
 .nav-actions {
@@ -308,7 +308,7 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/image.webp");
+  background-image: url("/toadRock.jpg");
   background-size: cover;
   background-position: 68% 38%;
   z-index: 0;
