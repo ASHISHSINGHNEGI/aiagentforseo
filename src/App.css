@@ -242,7 +242,7 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
-  background: rgba(9, 9, 11, 0.82);
+  /* background: rgba(9, 9, 11, 0.82); */
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--agent-border);
   box-sizing: border-box;

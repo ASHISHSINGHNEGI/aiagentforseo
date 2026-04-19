@@ -1,17 +1,21 @@
-@font-face {
+
+/* @font-face {
   font-family: 'PPMondwest';
   src: url('./assets/ppmodwestFOnt/ppmondwest-regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
-}
+} */
 
-@font-face {
+/* @font-face {
   font-family: 'PPNeueBit';
   src: url('./assets/ppmodwestFOnt/ppneuebit-bold.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
+} */
+@font-face {
+  font-family: 'Satoshi';
+  src: local('Satoshi-Regular'), url('./assets/fonts/Satoshi/Satoshi-Regular.woff2') format('woff2');
 }
-
 /* Engine Room palette — zinc-950 / emerald-400 */
 :root {
   --agent-bg:        #09090b; /* zinc-950 */
@@ -26,6 +30,8 @@
   --agent-accent-dk: #10b981; /* emerald-500 */
   --agent-accent-lt: #6ee7b7; /* emerald-300 */
   --agent-glow:      rgba(52, 211, 153, 0.15);
+  --font-default: 'Satoshi', sans-serif;
+  /* --font-heading: 'PPNeueBit', sans-serif; */
 }
 
 * {
@@ -35,7 +41,7 @@
 }
 
 body {
-  font-family: 'PPMondwest', sans-serif;
+  font-family: var(--font-default);
   background-color: var(--agent-bg);
   color: var(--agent-text);
   min-height: 100vh;
