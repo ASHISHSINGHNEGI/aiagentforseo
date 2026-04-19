@@ -15,7 +15,13 @@ export function SiteHeader() {
           alt="Ryle"
           style={{ width: "1.8em", height: "1.8em", objectFit: "contain" }}
         />
-        <span style={{ fontFamily: '"Inter", sans-serif', fontWeight: 800 ,fontSize:40 }}>
+        <span
+          style={{
+            fontFamily: '"Inter", sans-serif',
+            fontWeight: 800,
+            fontSize: 40,
+          }}
+        >
           Ryze
         </span>
       </div>
@@ -34,9 +40,8 @@ export function SiteHeader() {
         </a>
       </div>
       <div className="nav-actions">
-        <button className="btn-login">Log In</button>
         <button className="btn-primary">
-          Dashboard <ArrowRight size={14} />
+          Get started <ArrowRight size={14} />
         </button>
         <button
           className="mobile-menu-btn"

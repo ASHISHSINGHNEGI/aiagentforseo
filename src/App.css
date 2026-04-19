@@ -125,8 +125,8 @@ main {
 
 /* ── Buttons ─────────────────────────────────────────────────── */
 .btn-primary {
-  background: var(--agent-accent);
-  color: var(--agent-bg);
+  background: var(--agent-bg);
+  color: var(--agent-text);
   border: none;
   padding: 0.65rem 1.35rem;
   border-radius: 999px;
