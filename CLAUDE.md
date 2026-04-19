@@ -94,6 +94,6 @@ Given your experience with Swagger and OpenAPI, I suggest adding a **Developer E
 
 Since you are comfortable with the MERN stack and TypeScript, you can map these components 1:1 to your frontend codebase:
 
-1.  **Modularize:** Create a directory `/components/landing` to hold these individual files.
+1.  **Modularize:** Create a directory `/components` to hold these individual files. main page should only import component created in `/components`
 2.  **State Management:** For the Hero CTA or Pricing toggles, use minimal state.
 3.  **Type Safety:** Define your interfaces for components (e.g., `interface PricingCardProps`) early to ensure consistency.
