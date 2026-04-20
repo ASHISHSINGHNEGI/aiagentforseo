@@ -77,20 +77,7 @@ export function MockConsole() {
         </div>
       </div>
 
-      <div className="console-float-card rank-card">
-        <TrendingUp size={14} className="fc-icon-green" />
-        <div>
-          <div className="fc-label">Avg. Rank Change</div>
-          <div className="fc-value">+14 positions</div>
-        </div>
-      </div>
-      <div className="console-float-card issues-card">
-        <CheckCircle size={14} className="fc-icon-green" />
-        <div>
-          <div className="fc-label">Issues Resolved</div>
-          <div className="fc-value">247 auto-fixed</div>
-        </div>
-      </div>
+    
     </div>
   );
 }
