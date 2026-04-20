@@ -267,14 +267,12 @@ export interface LogoBrand {
 }
 
 export const LOGOS: LogoBrand[] = [
-  { name: "Google",    src: "https://cdn.simpleicons.org/google/4285F4",    color: "#4285F4" },
-  { name: "Meta",      src: "https://cdn.simpleicons.org/meta/0866FF",      color: "#0866FF" },
-  { name: "Vercel",    src: "https://cdn.simpleicons.org/vercel/ffffff",    color: "#0a0a0aff" },
-  { name: "Netflix",   src: "https://cdn.simpleicons.org/netflix/E50914",   color: "#E50914" },
-  { name: "Spotify",   src: "https://cdn.simpleicons.org/spotify/1DB954",   color: "#1DB954" },
-  { name: "Stripe",    src: "https://cdn.simpleicons.org/stripe/635BFF",    color: "#635BFF" },
-  { name: "GitHub",    src: "https://cdn.simpleicons.org/github/f0f6fc",    color: "#f0f6fc" },
-  { name: "Apple",     src: "https://cdn.simpleicons.org/apple/a3a3a3",     color: "#a3a3a3" },
+  { name: "Google",  src: "https://cdn.simpleicons.org/google/4285F4",  color: "#4285F4" },
+  { name: "Meta",    src: "https://cdn.simpleicons.org/meta/0866FF",    color: "#0866FF" },
+  { name: "Netflix", src: "https://cdn.simpleicons.org/netflix/E50914", color: "#E50914" },
+  { name: "Spotify", src: "https://cdn.simpleicons.org/spotify/1DB954", color: "#1DB954" },
+  { name: "Stripe",  src: "https://cdn.simpleicons.org/stripe/635BFF",  color: "#635BFF" },
+  { name: "Apple",   src: "https://cdn.simpleicons.org/apple/a3a3a3",   color: "#a3a3a3" },
 ];
 
 export const TESTIMONIALS = [

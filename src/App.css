@@ -649,8 +649,8 @@ main {
 
 /* ── Mock Console ────────────────────────────────────────────── */
 .console-window {
-  background: var(--agent-bg-card);
-  border: 1px solid var(--agent-border);
+  background: #18181b;
+  border: 1px solid #27272a;
   border-radius: 14px;
   overflow: hidden;
   box-shadow:
@@ -659,7 +659,31 @@ main {
   position: relative;
   width: 100%;
   min-width: 480px;
+  color-scheme: dark;
 }
+
+/* Console always dark — override any theme-switched vars */
+.console-window .console-titlebar,
+.console-window .console-body,
+.console-window .console-prompt-line,
+.console-window .console-line,
+.console-window .console-cursor-line {
+  color: #f4f4f5;
+}
+.console-window .console-title     { color: #71717a; }
+.console-window .prompt-user       { color: #34d399; }
+.console-window .prompt-at         { color: #71717a; }
+.console-window .prompt-path       { color: #71717a; }
+.console-window .line-cmd          { color: #a1a1aa; }
+.console-window .line-ok           { color: #34d399; }
+.console-window .line-success      { color: #34d399; font-weight: 700; }
+.console-window .line-info         { color: #71717a; }
+.console-window .line-prefix       { color: #71717a; }
+.console-window .line-prefix.ok    { color: #34d399; }
+.console-window .console-cursor    { color: #34d399; }
+.console-window .console-live-badge { color: #34d399; }
+.console-window .live-pulse        { background: #34d399; }
+.console-window .dot-green         { background: #34d399; }
 
 .console-titlebar {
   display: flex;
@@ -667,7 +691,7 @@ main {
   gap: 0.75rem;
   padding: 0.85rem 1.6rem;
   background: rgba(24, 24, 27, 0.9);
-  border-bottom: 1px solid var(--agent-border);
+  border-bottom: 1px solid #27272a;
 }
 .console-dots {
   display: flex;
@@ -1075,6 +1099,9 @@ main {
   border-top: 1px solid var(--agent-border);
   border-bottom: 1px solid var(--agent-border);
 }
+[data-theme="light"] .social-proof {
+  background: #f1f1f3;
+}
 
 /* Row 1 — label */
 .sp-label-row {
@@ -1095,7 +1122,7 @@ main {
 /* Row 2 — logo grid */
 .logo-grid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   border-top: 1px solid var(--agent-border);
 }
 .logo-box {
