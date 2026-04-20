@@ -1,42 +1,20 @@
-import { Star } from "lucide-react";
-import { LOGOS, TESTIMONIALS } from "../data";
+import { LOGOS } from "../data";
 
 export function SocialProofBar() {
   return (
     <section className="social-proof">
-      <p className="social-proof-label">Trusted by 10,000+ teams worldwide</p>
-      <div className="logo-track-wrapper">
-        <div className="logo-track">
-          {[...LOGOS, ...LOGOS].map((name, i) => (
-            <div className="logo-item" key={i}>
-              <span className="logo-chip">{name}</span>
-            </div>
-          ))}
-        </div>
+      {/* Row 1 — proof label */}
+      <div className="sp-label-row">
+        <p className="social-proof-label">Trusted by teams at</p>
       </div>
-      <div className="testimonial-row">
-        {TESTIMONIALS.map((t, i) => (
-          <div className="testimonial-card glass-card" key={i}>
-            <div className="stars">
-              {Array(t.stars)
-                .fill(0)
-                .map((_, si) => (
-                  <Star
-                    key={si}
-                    size={13}
-                    fill="var(--agent-accent)"
-                    stroke="none"
-                  />
-                ))}
-            </div>
-            <p className="testimonial-quote">"{t.quote}"</p>
-            <div className="testimonial-author">
-              <div className="avatar-initials">{t.initials}</div>
-              <div>
-                <div className="author-name">{t.name}</div>
-                <div className="author-role">{t.role}</div>
-              </div>
-            </div>
+
+      {/* Row 2 — branded logo boxes */}
+      <div className="logo-track-wrapper">
+        {LOGOS.map((brand) => (
+          <div className="logo-box" key={brand.name}>
+            <span className="logo-box-name" style={brand.style}>
+              {brand.name}
+            </span>
           </div>
         ))}
       </div>

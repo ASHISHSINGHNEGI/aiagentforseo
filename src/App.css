@@ -1035,121 +1035,55 @@ main {
    SOCIAL PROOF
 ================================================================ */
 .social-proof {
-  padding: 5rem 5%;
-  text-align: center;
   z-index: 1;
   position: relative;
   border-top: 1px solid var(--agent-border);
+  border-bottom: 1px solid var(--agent-border);
+}
+
+/* Row 1 — label */
+.sp-label-row {
+  padding: 1.4rem 5%;
+  border-bottom: 1px solid var(--agent-border);
+  background: transparent;
 }
 .social-proof-label {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: var(--agent-text-faint);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  text-align: center;
+  letter-spacing: 0.12em;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin: 0;
 }
 
+/* Row 2 — logo boxes */
 .logo-track-wrapper {
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 4rem;
-}
-.logo-track-wrapper::before,
-.logo-track-wrapper::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 120px;
-  z-index: 2;
-}
-.logo-track-wrapper::before {
-  left: 0;
-  background: linear-gradient(to right, var(--agent-bg), transparent);
-}
-.logo-track-wrapper::after {
-  right: 0;
-  background: linear-gradient(to left, var(--agent-bg), transparent);
-}
-.logo-track {
-  display: flex;
-  gap: 2.5rem;
-  animation: scrollTrack 22s linear infinite;
-  width: max-content;
-}
-
-.logo-item {
-  display: flex;
-  align-items: center;
-}
-.logo-chip {
-  font-family: "Courier New", monospace;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--agent-text-faint);
-  border: 1px solid var(--agent-border);
-  border-radius: 8px;
-  padding: 0.4rem 1rem;
-  background: var(--agent-bg-card);
-  transition:
-    color 0.3s,
-    border-color 0.3s;
-  white-space: nowrap;
-}
-.logo-chip:hover {
-  color: var(--agent-accent);
-  border-color: rgba(52, 211, 153, 0.3);
-}
-
-.testimonial-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.4rem;
-  max-width: 1080px;
-  margin: 0 auto;
+    grid-template-columns: repeat(8, 1fr);
+  background: transparent;
 }
-.testimonial-card {
-  padding: 1.6rem;
-  text-align: left;
-  transition:
-    transform 0.3s,
-    border-color 0.3s;
-}
-.testimonial-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--agent-border-mid);
-}
-.stars {
-  display: flex;
-  gap: 3px;
-  margin-bottom: 0.85rem;
-}
-.testimonial-quote {
-  font-size: 0.93rem;
-  color: var(--agent-text-muted);
-  line-height: 1.65;
-  margin-bottom: 1.4rem;
-  font-style: italic;
-}
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-}
-.avatar-initials {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: rgba(52, 211, 153, 0.12);
-  border: 1px solid rgba(52, 211, 153, 0.25);
-  color: var(--agent-accent);
-  font-weight: 800;
-  font-size: 0.82rem;
+.logo-box {
+  padding: 1.4rem 1rem;
+  border-right: 1px solid var(--agent-border);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  transition: background 0.2s;
+}
+.logo-box:last-child {
+  border-right: none;
+}
+.logo-box:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+.logo-box-name {
+  white-space: nowrap;
+  transition: opacity 0.2s;
+  opacity: 0.75;
+}
+.logo-box:hover .logo-box-name {
+  opacity: 1;
 }
 .author-name {
   font-size: 0.88rem;
