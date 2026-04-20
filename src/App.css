@@ -1057,11 +1057,11 @@ main {
   margin: 0;
 }
 
-/* Row 2 — logo boxes */
-.logo-track-wrapper {
+/* Row 2 — logo grid */
+.logo-grid {
   display: grid;
-    grid-template-columns: repeat(8, 1fr);
-  background: transparent;
+  grid-template-columns: repeat(8, 1fr);
+  border-top: 1px solid var(--agent-border);
 }
 .logo-box {
   padding: 1.4rem 1rem;
@@ -1077,13 +1077,28 @@ main {
 .logo-box:hover {
   background: rgba(255, 255, 255, 0.03);
 }
-.logo-box-name {
-  white-space: nowrap;
+.logo-img {
+  height: 28px;
+  width: auto;
+  /* opacity: 0.55; */
   transition: opacity 0.2s;
-  opacity: 0.75;
+  object-fit: contain;
 }
-.logo-box:hover .logo-box-name {
+.logo-box:hover .logo-img {
   opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .logo-box {
+    border-bottom: 1px solid var(--agent-border);
+    border-right: none;
+  }
+  .logo-box:nth-child(odd) {
+    border-right: 1px solid var(--agent-border);
+  }
 }
 .author-name {
   font-size: 0.88rem;

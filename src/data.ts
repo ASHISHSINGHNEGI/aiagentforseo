@@ -262,42 +262,19 @@ export const PLANS: PlanData[] = [
 // ============================================================
 export interface LogoBrand {
   name: string;
-  style: React.CSSProperties;
+  src: string;
+  color: string;
 }
 
 export const LOGOS: LogoBrand[] = [
-  {
-    name: "Google",
-    style: { fontFamily: "'Roboto', sans-serif", fontWeight: 500, fontSize: "1rem", letterSpacing: "-0.2px", color: "#4285F4" },
-  },
-  {
-    name: "meta",
-    style: { fontFamily: "'Inter', sans-serif", fontWeight: 700, fontSize: "1rem", color: "#0866FF", letterSpacing: "-0.5px" },
-  },
-  {
-    name: "Microsoft",
-    style: { fontFamily: "'Segoe UI', 'DM Sans', sans-serif", fontWeight: 300, fontSize: "0.95rem", letterSpacing: "0.01em", color: "#737373" },
-  },
-  {
-    name: "NETFLIX",
-    style: { fontFamily: "'Bebas Neue', sans-serif", fontWeight: 400, fontSize: "1.1rem", letterSpacing: "2px", color: "#E50914" },
-  },
-  {
-    name: "Spotify",
-    style: { fontFamily: "'Nunito', sans-serif", fontWeight: 900, fontSize: "0.95rem", letterSpacing: "-0.3px", color: "#1DB954" },
-  },
-  {
-    name: "amazon",
-    style: { fontFamily: "'Roboto', sans-serif", fontWeight: 400, fontSize: "1rem", letterSpacing: "0.5px", color: "#FF9900" },
-  },
-  {
-    name: "GitHub",
-    style: { fontFamily: "'Space Mono', monospace", fontWeight: 700, fontSize: "0.82rem", letterSpacing: "-0.5px", color: "#f0f6fc" },
-  },
-  {
-    name: "Apple",
-    style: { fontFamily: "-apple-system, 'DM Sans', sans-serif", fontWeight: 300, fontSize: "1rem", letterSpacing: "0.02em", color: "#a3a3a3" },
-  },
+  { name: "Google",    src: "https://cdn.simpleicons.org/google/4285F4",    color: "#4285F4" },
+  { name: "Meta",      src: "https://cdn.simpleicons.org/meta/0866FF",      color: "#0866FF" },
+  { name: "Microsoft", src: "https://cdn.simpleicons.org/microsoft/737373", color: "#737373" },
+  { name: "Netflix",   src: "https://cdn.simpleicons.org/netflix/E50914",   color: "#E50914" },
+  { name: "Spotify",   src: "https://cdn.simpleicons.org/spotify/1DB954",   color: "#1DB954" },
+  { name: "Amazon",    src: "https://cdn.simpleicons.org/amazon/FF9900",    color: "#FF9900" },
+  { name: "GitHub",    src: "https://cdn.simpleicons.org/github/f0f6fc",    color: "#f0f6fc" },
+  { name: "Apple",     src: "https://cdn.simpleicons.org/apple/a3a3a3",     color: "#a3a3a3" },
 ];
 
 export const TESTIMONIALS = [

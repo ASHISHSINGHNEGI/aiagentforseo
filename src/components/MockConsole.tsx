@@ -1,4 +1,3 @@
-import { CheckCircle, TrendingUp } from "lucide-react";
 import { useEffect, useState } from "react";
 import { CONSOLE_LINES } from "../data";
 
