@@ -4,21 +4,37 @@
   src: local('Satoshi-Regular'), url('./assets/fonts/Satoshi/Satoshi-Regular.woff2') format('woff2');
 }
 /* Engine Room palette — zinc-950 / emerald-400 */
-:root {
-  --agent-bg:        #09090b; /* zinc-950 */
-  --agent-bg-card:   #18181b; /* zinc-900 */
-  --agent-bg-raised: #27272a; /* zinc-800 */
-  --agent-border:    #27272a; /* zinc-800 */
-  --agent-border-mid:#3f3f46; /* zinc-700 */
-  --agent-text:      #f4f4f5; /* zinc-100 */
-  --agent-text-muted:#a1a1aa; /* zinc-400 */
-  --agent-text-faint:#71717a; /* zinc-500 */
-  --agent-accent:    #34d399; /* emerald-400 */
-  --agent-accent-dk: #10b981; /* emerald-500 */
-  --agent-accent-lt: #6ee7b7; /* emerald-300 */
+:root,
+[data-theme="dark"] {
+  --agent-bg:        #09090b;
+  --agent-bg-card:   #18181b;
+  --agent-bg-raised: #27272a;
+  --agent-border:    #27272a;
+  --agent-border-mid:#3f3f46;
+  --agent-text:      #f4f4f5;
+  --agent-text-muted:#a1a1aa;
+  --agent-text-faint:#71717a;
+  --agent-accent:    #34d399;
+  --agent-accent-dk: #10b981;
+  --agent-accent-lt: #6ee7b7;
   --agent-glow:      rgba(52, 211, 153, 0.15);
   --font-default: 'Satoshi', sans-serif;
-  /* --font-heading: 'PPNeueBit', sans-serif; */
+}
+
+[data-theme="light"] {
+  --agent-bg:        #ffffff;
+  --agent-bg-card:   #f4f4f5;
+  --agent-bg-raised: #e4e4e7;
+  --agent-border:    #e4e4e7;
+  --agent-border-mid:#d4d4d8;
+  --agent-text:      #09090b;
+  --agent-text-muted:#52525b;
+  --agent-text-faint:#a1a1aa;
+  --agent-accent:    #059669;
+  --agent-accent-dk: #047857;
+  --agent-accent-lt: #10b981;
+  --agent-glow:      rgba(5, 150, 105, 0.12);
+  --font-default: 'Satoshi', sans-serif;
 }
 
 * {
@@ -29,8 +45,9 @@
 
 body {
   font-family: var(--font-default);
-  /* background-color: var(--agent-bg); */
-  color: var(--agent-bg);
+  background-color: var(--agent-bg);
+  color: var(--agent-text);
+  transition: background-color 0.3s, color 0.3s;
   min-height: 100vh;
   overflow-x: hidden;
 }
