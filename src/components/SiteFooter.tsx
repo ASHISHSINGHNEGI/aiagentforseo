@@ -6,9 +6,8 @@ export function SiteFooter() {
       <div className="footer-top">
         <div className="footer-brand">
           <div className="logo">
-            <Zap className="logo-icon" size={20} />
             <span>
-              SEO<span className="text-gradient">AI</span>
+              RYZE <span className="text-gradient">AI</span>
             </span>
           </div>
           <p className="footer-tagline">
