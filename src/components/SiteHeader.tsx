@@ -20,7 +20,6 @@ export function SiteHeader() {
     localStorage.setItem("theme", dark ? "dark" : "light");
   }, [dark]);
 
-  const isLight = !dark;
 
   return (
     <header className={`navbar-wrapper ${scrolled ? "scrolled" : ""}`}>
