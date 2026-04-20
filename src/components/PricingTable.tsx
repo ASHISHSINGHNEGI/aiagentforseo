@@ -44,7 +44,6 @@ export function PricingTable() {
   return (
     <section className="pricing" id="pricing">
       <div className="section-header">
-        <div className="section-tag">Pricing</div>
         <h2 className="section-title">
           Simple, <span className="text-gradient">transparent</span> pricing
         </h2>

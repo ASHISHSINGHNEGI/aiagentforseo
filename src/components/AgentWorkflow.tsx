@@ -25,13 +25,13 @@ export function AgentWorkflow() {
   return (
     <section className="workflow" id="workflow">
       <div className="section-header">
-        <div className="section-tag">How It Works</div>
+        {/* <div className="section-tag">How It Works</div> */}
         <h2 className="section-title">
           Three steps to <span className="text-gradient">autonomous SEO</span>
         </h2>
         <p className="section-sub">
-          Your agent runs end-to-end — from crawl to live deployment — with zero
-          manual steps.
+          Your agent does everything, from crawling to going live, without you
+          having to do anything.
         </p>
       </div>
       <div className="workflow-steps">

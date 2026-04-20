@@ -8,44 +8,6 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
-function SparklineUp() {
-  return (
-    <svg viewBox="0 0 80 32" className="sparkline sparkline-up" fill="none">
-      <polyline
-        points="0,28 16,24 32,20 48,12 64,6 80,2"
-        stroke="var(--agent-accent)"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <polyline
-        points="0,28 16,24 32,20 48,12 64,6 80,2 80,32 0,32"
-        fill="var(--agent-accent)"
-        fillOpacity="0.08"
-      />
-    </svg>
-  );
-}
-
-function SparklineDown() {
-  return (
-    <svg viewBox="0 0 80 32" className="sparkline sparkline-down" fill="none">
-      <polyline
-        points="0,4 16,8 32,10 48,18 64,24 80,30"
-        stroke="#f87171"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <polyline
-        points="0,4 16,8 32,10 48,18 64,24 80,30 80,0 0,0"
-        fill="#f87171"
-        fillOpacity="0.06"
-      />
-    </svg>
-  );
-}
-
 function ManualDashboard() {
   return (
     <div className="sim-dashboard pain-bad glass-card">
@@ -80,10 +42,10 @@ function ManualDashboard() {
             </div>
           ))}
         </div>
-        <div className="sim-chart-wrap">
+        {/* <div className="sim-chart-wrap">
           <span className="sim-chart-label red">Organic Traffic ↓</span>
           <SparklineDown />
-        </div>
+        </div> */}
         <div className="sim-tools">
           <span className="tool-chip">Search Console</span>
           <span className="tool-chip">Ahrefs</span>
@@ -104,7 +66,7 @@ function AgentDashboard() {
   }, []);
 
   const gains = ["+6", "+11", "+14", "+9", "+18", "+22"];
-  const currentGain = gains[tick % gains.length];
+  void gains[tick % gains.length];
 
   return (
     <div className="sim-dashboard pain-good glass-card">
@@ -140,15 +102,16 @@ function AgentDashboard() {
             </div>
           ))}
         </div>
-        <div className="sim-chart-wrap">
+        {/* <div className="sim-chart-wrap">
           <span className="sim-chart-label green">
             Organic Traffic ↑ {currentGain}%
           </span>
           <SparklineUp />
-        </div>
+        </div> */}
         <div className="sim-tools">
           <span className="tool-chip tool-chip-green">
-            <Zap size={10} /> 1 unified agent
+            <Zap size={10} />
+            Ryze agent
           </span>
         </div>
       </div>
@@ -160,7 +123,6 @@ export function PainPointSection() {
   return (
     <section className="pain-point" id="pain">
       <div className="section-header">
-        <div className="section-tag">The Problem</div>
         <h2 className="section-title">
           Manual SEO is <span className="text-gradient">broken</span>
         </h2>

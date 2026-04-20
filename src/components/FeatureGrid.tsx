@@ -97,14 +97,13 @@ export function FeatureGrid() {
   return (
     <section className="features" id="features">
       <div className="section-header">
-        <div className="section-tag">Features</div>
         <h2 className="section-title">
           Every capability your stack{" "}
           <span className="text-gradient">needs</span>
         </h2>
         <p className="section-sub">
-          Each card shows Pain → Agent Action → Result. Watch the agent work in
-          real time.
+          Each card has three parts: Pain, Agent Action, and Result. See the
+          agent work in real time.
         </p>
       </div>
       <div className="feature-bento">
