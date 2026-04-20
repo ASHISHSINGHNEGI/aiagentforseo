@@ -243,7 +243,9 @@ main {
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 .navbar-wrapper.scrolled {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
 }
 
@@ -430,11 +432,10 @@ main {
 .hero {
   padding: 9rem 5% 5rem;
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 3.5rem;
+  grid-template-columns: 50% 1fr;
+  gap: 0;
   align-items: center;
-  max-width: 1300px;
-  margin: 0 auto;
+  width: 100%;
   min-height: 100vh;
   position: relative;
   z-index: 2; /* above the ::after gradient overlay */
@@ -444,6 +445,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
+  max-width: 560px;
+  padding-left: 4%;
 }
 
 .hero-badge {
@@ -1877,6 +1880,10 @@ main {
     grid-template-columns: 1fr;
     text-align: center;
     padding: 8rem 5% 4rem;
+  }
+  .hero-content {
+    max-width: 100%;
+    padding-left: 0;
   }
   .hero-description {
     max-width: 100%;

@@ -16,11 +16,19 @@ export function SiteHeader() {
       <nav className="navbar-pill">
         {/* Logo */}
         <div className="logo">
-          <img
-            src="/claude.png"
-            alt="Ryze"
-            style={{ width: "1.5em", height: "1.5em", objectFit: "contain" }}
-          />
+          {scrolled ? (
+            <img
+              src="/claude(black).svg"
+              alt="Ryze"
+              style={{ width: "1.5em", height: "1.5em", objectFit: "contain" }}
+            />
+          ) : (
+            <img
+              src="/claude.png"
+              alt="Ryze"
+              style={{ width: "1.5em", height: "1.5em", objectFit: "contain" }}
+            />
+          )}
           <span className="logo-text">Ryze</span>
         </div>
 
