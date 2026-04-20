@@ -23,17 +23,17 @@
 
 [data-theme="light"] {
   --agent-bg:        #ffffff;
-  --agent-bg-card:   #f4f4f5;
-  --agent-bg-raised: #e4e4e7;
-  --agent-border:    #e4e4e7;
-  --agent-border-mid:#d4d4d8;
-  --agent-text:      #09090b;
-  --agent-text-muted:#52525b;
-  --agent-text-faint:#a1a1aa;
-  --agent-accent:    #da7756;
-  --agent-accent-dk: #df9b85;
-  --agent-accent-lt: #10b981;
-  --agent-glow:      rgba(5, 150, 105, 0.12);
+  --agent-bg-card:   #ffffff;
+  --agent-bg-raised: #ffffff;
+  --agent-border:    #000000;
+  --agent-border-mid:#000000;
+  --agent-text:      #000000;
+  --agent-text-muted:#000000;
+  --agent-text-faint:#000000;
+  --agent-accent:    #000000;
+  --agent-accent-dk: #000000;
+  --agent-accent-lt: #000000;
+  --agent-glow:      rgba(0, 0, 0, 1);
   --font-default: 'Satoshi', sans-serif;
 }
 
