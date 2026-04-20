@@ -1,4 +1,4 @@
-import { ArrowRight, Database, Zap } from "lucide-react";
+import { ArrowRight, Database } from "lucide-react";
 
 export function SiteFooter() {
   return (
@@ -72,7 +72,7 @@ export function SiteFooter() {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2026 SEOAI Inc. All rights reserved.</p>
+        <p>© 2026 Ryze.ai Inc. All rights reserved.</p>
         <div className="footer-bottom-links">
           <a href="#">Privacy</a>
           <a href="#">Terms</a>

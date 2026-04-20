@@ -27,20 +27,36 @@ export function SiteHeader() {
       <nav className="navbar-pill">
         {/* Logo */}
         <div className="logo">
-          {scrolled || isLight ? (
-            <img src="/claude(black).svg" alt="Ryze" style={{ width: "1.5em", height: "1.5em", objectFit: "contain" }} />
+          {scrolled ? (
+            <img
+              src="/claude(black).svg"
+              alt="Ryze"
+              style={{ width: "2a em", height: "2em", objectFit: "contain" }}
+            />
           ) : (
-            <img src="/claude.png" alt="Ryze" style={{ width: "1.5em", height: "1.5em", objectFit: "contain" }} />
+            <img
+              src="/claude.png"
+              alt="Ryze"
+              style={{ width: "2em", height: "2em", objectFit: "contain" }}
+            />
           )}
           <span className="logo-text">Ryze</span>
         </div>
 
         {/* Center links */}
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <a href="#features" onClick={() => setMenuOpen(false)}>Features</a>
-          <a href="#workflow" onClick={() => setMenuOpen(false)}>How It Works</a>
-          <a href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
-          <a href="#docs" onClick={() => setMenuOpen(false)}>Docs</a>
+          <a href="#features" onClick={() => setMenuOpen(false)}>
+            Features
+          </a>
+          <a href="#workflow" onClick={() => setMenuOpen(false)}>
+            How It Works
+          </a>
+          <a href="#pricing" onClick={() => setMenuOpen(false)}>
+            Pricing
+          </a>
+          <a href="#docs" onClick={() => setMenuOpen(false)}>
+            Docs
+          </a>
         </div>
 
         {/* Right actions */}
