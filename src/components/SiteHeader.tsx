@@ -6,7 +6,7 @@ export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [dark, setDark] = useState(() => {
     const saved = localStorage.getItem("theme");
-    return saved ? saved === "dark" : true;
+    return saved ? saved === "dark" : false;
   });
 
   useEffect(() => {
@@ -16,10 +16,12 @@ export function SiteHeader() {
   }, []);
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+    document.documentElement.setAttribute(
+      "data-theme",
+      dark ? "dark" : "light",
+    );
     localStorage.setItem("theme", dark ? "dark" : "light");
   }, [dark]);
-
 
   return (
     <header className={`navbar-wrapper ${scrolled ? "scrolled" : ""}`}>
@@ -28,7 +30,7 @@ export function SiteHeader() {
         <div className="logo">
           {scrolled ? (
             <img
-              src="/claude(black).svg"
+              src="/claude-color.svg"
               alt="Ryze"
               style={{ width: "2a em", height: "2em", objectFit: "contain" }}
             />

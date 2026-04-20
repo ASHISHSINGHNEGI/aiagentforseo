@@ -5,6 +5,22 @@
 }
 /* Engine Room palette — zinc-950 / emerald-400 */
 :root,
+[data-theme="light"] {
+  --agent-bg:        #ffffff;
+  --agent-bg-card:   #f9fafb;
+  --agent-bg-raised: #f3f4f6;
+  --agent-border:    #e5e7eb;
+  --agent-border-mid:#d1d5db;
+  --agent-text:      #09090b;
+  --agent-text-muted:#4b5563;
+  --agent-text-faint:#9ca3af;
+  --agent-accent:    #059669;
+  --agent-accent-dk: #047857;
+  --agent-accent-lt: #10b981;
+  --agent-glow:      rgba(5, 150, 105, 0.1);
+  --font-default: 'Satoshi', sans-serif;
+}
+
 [data-theme="dark"] {
   --agent-bg:        #09090b;
   --agent-bg-card:   #18181b;
@@ -18,22 +34,6 @@
   --agent-accent-dk: #10b981;
   --agent-accent-lt: #6ee7b7;
   --agent-glow:      rgba(52, 211, 153, 0.15);
-  --font-default: 'Satoshi', sans-serif;
-}
-
-[data-theme="light"] {
-  --agent-bg:        #ffffff;
-  --agent-bg-card:   #ffffff;
-  --agent-bg-raised: #ffffff;
-  --agent-border:    #000000;
-  --agent-border-mid:#000000;
-  --agent-text:      #000000;
-  --agent-text-muted:#000000;
-  --agent-text-faint:#000000;
-  --agent-accent:    #000000;
-  --agent-accent-dk: #000000;
-  --agent-accent-lt: #000000;
-  --agent-glow:      rgba(0, 0, 0, 1);
   --font-default: 'Satoshi', sans-serif;
 }
 
