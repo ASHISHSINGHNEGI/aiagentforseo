@@ -394,6 +394,7 @@ main {
   content: "";
   position: absolute;
   inset: 0;
+  filter: brightness(0.6);
   background-image: url("/toadRock.jpg");
   background-size: cover;
   background-position: 68% 38%;
@@ -409,34 +410,18 @@ main {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      to right,
-      #09090b 0%,
-      #09090b 28%,
-      rgba(9, 9, 11, 0.82) 46%,
-      rgba(9, 9, 11, 0.38) 65%,
-      rgba(9, 9, 11, 0.55) 100%
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(9, 9, 11, 0.55) 0%,
-      transparent 15%,
-      transparent 78%,
-      rgba(9, 9, 11, 0.9) 100%
-    );
   z-index: 1;
 }
 
 /* Content grid sits above both layers */
 .hero {
-  padding: 9rem 5% 5rem;
+  padding: 0;
   display: grid;
-  grid-template-columns: 50% 1fr;
+  grid-template-columns: 45% 55%;
   gap: 0;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   z-index: 2; /* above the ::after gradient overlay */
 }
@@ -444,9 +429,10 @@ main {
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
-  max-width: 560px;
-  padding-left: 4%;
+  justify-content: center;
+  gap: 1.6rem;
+  max-width: 620px;
+  padding: 0 2rem 0 5%;
 }
 
 .hero-badge {
@@ -475,30 +461,114 @@ main {
 
 .hero-title {
   font-family: "PPNeueBit", sans-serif;
-  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  font-size: clamp(3.2rem, 5.5vw, 6rem);
   font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -1px;
-  color: var(--agent-text);
+  line-height: 1.02;
+  letter-spacing: -2px;
+  color: #ffffff;
+  text-shadow: 0 2px 40px rgba(255, 255, 255, 0.12);
   animation: fadeUp 0.8s ease-out 0.1s forwards;
   opacity: 0;
 }
 
 .hero-description {
-  font-size: 1.05rem;
-  color: var(--agent-text-muted);
+  font-size: 1.15rem;
+  color: rgb(255, 255, 255);
   line-height: 1.72;
-  max-width: 460px;
+  max-width: 480px;
   animation: fadeUp 0.8s ease-out 0.2s forwards;
   opacity: 0;
 }
 
 .hero-actions {
-  display: flex;
-  gap: 0.9rem;
-  flex-wrap: wrap;
   animation: fadeUp 0.8s ease-out 0.3s forwards;
   opacity: 0;
+}
+
+.hero-input-group {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 3px;
+  padding: 0.35rem 0.35rem 0.35rem 1.1rem;
+  gap: 0.5rem;
+}
+
+.hero-email-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #09090b;
+  font-size: 0.95rem;
+  font-family: inherit;
+  min-width: 200px;
+}
+.hero-email-input::placeholder {
+  color: #a1a1aa;
+}
+
+.hero-cta-btn {
+  background: #09090b;
+  color: #ffffff;
+  border: none;
+  padding: 0.65rem 1.4rem;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.hero-cta-btn:hover {
+  background: var(--agent-accent);
+  color: #09090b;
+  box-shadow: 0 4px 20px rgba(52, 211, 153, 0.35);
+}
+
+.hero-trusted {
+  margin-top: 0.5rem;
+  animation: fadeUp 0.8s ease-out 0.35s forwards;
+  opacity: 0;
+}
+
+
+.trusted-logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 1rem;
+  flex-wrap: wrap; */
+}
+
+.trusted-icon {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  opacity: 1;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.2s, transform 0.2s;
+}
+.trusted-icon:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.brand-icon {
+  width: 22px;
+  height: 22px;
+  color: rgba(255, 255, 255, 0.65);
+  transition: color 0.2s, transform 0.2s;
+}
+
+.brand-icon:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
 .hero-stats {
@@ -517,12 +587,12 @@ main {
   font-family: "PPNeueBit", sans-serif;
   font-size: 1.7rem;
   font-weight: 800;
-  color: var(--agent-accent);
+  color: var(--agent-text);
   line-height: 1;
 }
 .stat-label {
   font-size: 0.72rem;
-  color: var(--agent-text-faint);
+  color: var(--agent-text);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.07em;
@@ -534,6 +604,10 @@ main {
 }
 
 .hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 5% 2rem 2rem;
   animation: fadeUp 1s ease-out 0.5s forwards;
   opacity: 0;
 }
@@ -548,6 +622,7 @@ main {
     0 32px 80px rgba(0, 0, 0, 0.5),
     0 0 60px rgba(52, 211, 153, 0.06);
   position: relative;
+  margin: 1rem;
 }
 
 .console-titlebar {
@@ -637,7 +712,8 @@ main {
   display: flex;
   align-items: baseline;
   gap: 0.1rem;
-  animation: fadeInLine 0.15s ease-out forwards;
+  overflow: hidden;
+  animation: fadeInLine 0.22s ease-out forwards;
 }
 .line-cmd {
   color: var(--agent-text-muted);
@@ -1845,11 +1921,11 @@ main {
 @keyframes fadeInLine {
   from {
     opacity: 0;
-    transform: translateX(-4px);
+    max-height: 0;
   }
   to {
     opacity: 1;
-    transform: translateX(0);
+    max-height: 3rem;
   }
 }
 @keyframes scrollTrack {
@@ -1878,12 +1954,17 @@ main {
 @media (max-width: 1100px) {
   .hero {
     grid-template-columns: 1fr;
+    height: auto;
+    min-height: 100vh;
     text-align: center;
-    padding: 8rem 5% 4rem;
   }
   .hero-content {
     max-width: 100%;
-    padding-left: 0;
+    padding: 8rem 5% 3rem;
+    justify-content: flex-start;
+  }
+  .hero-visual {
+    padding: 0 5% 4rem;
   }
   .hero-description {
     max-width: 100%;
@@ -1926,6 +2007,24 @@ main {
 }
 
 @media (max-width: 768px) {
+  .console-window {
+    border-radius: 10px;
+  }
+  .console-titlebar {
+    padding: 0.5rem 0.75rem;
+  }
+  .console-title {
+    font-size: 0.7rem;
+  }
+  .console-body {
+    padding: 0.65rem 0.85rem 1rem;
+  }
+  .console-line,
+  .console-prompt-line,
+  .console-cursor-line {
+    font-size: 0.68rem;
+  }
+
   .navbar-wrapper {
     padding: 0.75rem 1rem;
   }
