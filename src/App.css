@@ -2130,10 +2130,15 @@ main {
   }
   .newsletter-form {
     width: 100%;
+    flex-wrap: wrap;
   }
   .newsletter-input {
     flex: 1;
     min-width: unset;
+  }
+  .newsletter-form .btn-primary {
+    width: 100%;
+    justify-content: center;
   }
   .footer-bottom {
     flex-direction: column;
